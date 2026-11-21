@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvest Hollow — Terror y supervivencia 1 vs 1</title>
+<meta name="description" content="Harvest Hollow: juego de terror y supervivencia para dos jugadores. Un sobreviviente, un granjero y una granja abandonada de noche.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cinzel+Decorative:wght@700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="atmosphere" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a href="#inicio" class="brand"><img src="img/skull.png" alt="" width="22"><span>Harvest Hollow</span></a>
+  <button class="burger" aria-label="Menú" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  <nav>
+    <a href="#historia">Historia</a>
+    <a href="#granja">La granja</a>
+    <a href="#bandos">Los bandos</a>
+    <a href="#arsenal">Arsenal</a>
+    <a href="#controles">Controles</a>
+    <a href="#galeria">Galería</a>
+    <a href="#equipo">Equipo</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Terror rural · Supervivencia 1 vs 1</p>
+    <h1 class="logo"><span>Harvest</span><img src="img/skull.png" alt="" class="skull"><span>Hollow</span></h1>
+    <p class="tagline">Escapa de la granja antes de que el granjero te encuentre.</p>
+    <div class="cta">
+      <a href="#historia" class="btn btn-red">Entrar a la granja</a>
+      <a href="#galeria" class="btn btn-ghost">Ver el juego</a>
+    </div>
+    <p class="meta">Desarrollado en Unreal Engine 5 · Propuesta de videojuego 2026</p>
+  </div>
+  <a href="#historia" class="scroll" aria-label="Bajar">▾</a>
+</section>
+
+<section id="historia" class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <h2>Temática</h2>
+      <div class="frame">
+        <p>Un juego de <strong>terror y supervivencia para dos personas</strong>: uno controla al sobreviviente y otro al asesino. Terror rural en el que solo existe la oscuridad de la noche, y todo gira en torno a una cosa: <em>escapar de una granja antes de que el asesino te encuentre.</em></p>
+      </div>
+      <ul class="stats">
+        <li><b>1 vs 1</b><span>Cazador y presa</span></li>
+        <li><b>3</b><span>Baldes de gasolina</span></li>
+        <li><b>5</b><span>Disparos para ganar</span></li>
+      </ul>
+    </div>
+    <figure class="arch reveal"><img src="img/pasillo.jpg" alt="Pasillo oscuro con luz al fondo"></figure>
+  </div>
+</section>
+
+<section id="granja" class="section dark">
+  <div class="wrap">
+    <h2 class="reveal">Espacio: la granja abandonada</h2>
+    <p class="lead reveal">Todo ocurre de noche, en una granja que lleva años sin visitas. Cada zona cambia la forma de jugar.</p>
+    <div class="zones">
+      <article class="zone reveal"><span class="num">I</span><h3>El granero</h3><p>El corazón de la granja, lleno de pacas de heno donde cualquiera puede cubrirse.</p></article>
+      <article class="zone reveal"><span class="num">II</span><h3>El establo</h3><p>Los animales pueden delatarte con su ruido si no tienes cuidado.</p></article>
+      <article class="zone reveal"><span class="num">III</span><h3>Los maizales</h3><p>Maíz tan alto que tapa la visión. Nunca sabes qué hay del otro lado.</p></article>
+      <article class="zone reveal"><span class="num">IV</span><h3>La tienda abandonada</h3><p>Sirve para buscar objetos o para esconderse un momento.</p></article>
+      <article class="zone reveal"><span class="num">V</span><h3>La zona podrida y bardeada</h3><p>Un rincón cerrado y siniestro que da al mapa un aire más opresivo.</p></article>
+    </div>
+    <div class="gallery-row reveal">
+      <figure><img src="img/mapa-aereo.jpg" alt="Vista aérea del escenario"><figcaption>Vista general del escenario</figcaption></figure>
+      <figure><img src="img/maizal.jpg" alt="Maizal"><figcaption>Los maizales</figcaption></figure>
+      <figure><img src="img/lago.jpg" alt="Lago de la granja"><figcaption>El lago</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="bandos" class="section">
+  <div class="wrap">
+    <h2 class="reveal">Dos bandos, un objetivo</h2>
+    <div class="versus">
+      <article class="side survivor reveal">
+        <img src="img/kenny2.jpg" alt="Boceto de Kenny" class="portrait">
+        <p class="role">Sobreviviente</p>
+        <h3>Kenny</h3>
+        <p>Un hombre cualquiera que terminó varado en la granja al caer la noche, sin recordar por qué. Solo quiere sobrevivir y salir de ahí.</p>
+        <h4>Para ganar</h4>
+        <p>Encontrar <b>3 baldes de gasolina</b>, llevarlos al generador, arrancarlo y salir por el portón principal.</p>
+        <h4>Pierde si…</h4>
+        <p>El asesino le acierta <b>5 disparos</b>. Cada impacto le quita el 20 % de su resistencia.</p>
+        <h4>Habilidades</h4>
+        <p>No puede atacar. Corre, se agacha y salta para moverse con sigilo y esquivar.</p>
+      </article>
+      <div class="vs reveal">VS</div>
+      <article class="side killer reveal">
+        <img src="img/jason.jpg" alt="" class="portrait ghost" aria-hidden="true">
+        <p class="role">Asesino</p>
+        <h3>El Granjero</h3>
+        <p>Una figura corpulenta y desfigurada que lleva años viviendo solo. La granja es su territorio y ya no distingue entre defender su casa y algo mucho más retorcido.</p>
+        <h4>Para ganar</h4>
+        <p>Disparar <b>5 veces</b> al sobreviviente antes de que arranque el generador y huya.</p>
+        <h4>Pierde si…</h4>
+        <p>El sobreviviente escapa antes de completar esos 5 impactos.</p>
+        <h4>Habilidades</h4>
+        <p>Camina más lento, pero compensa con armas de fuego. Debe recargar tras cada disparo y queda expuesto.</p>
+      </article>
+    </div>
+
+    <div class="rules reveal">
+      <h3>Reglas de la cacería</h3>
+      <ul>
+        <li><span>🌽</span> El maíz alto y las pacas de heno permiten que ambos se oculten el uno del otro.</li>
+        <li><span>⛽</span> Las latas de gasolina aparecen en lugares distintos cada partida.</li>
+        <li><span>🔫</span> El asesino necesita recargar después de cada disparo y queda un poco expuesto.</li>
+        <li><span>👟</span> Los power-ups que el sobreviviente encuentra pueden cambiar la persecución.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="arsenal" class="section dark">
+  <div class="wrap">
+    <h2 class="reveal">Arsenal y power-ups</h2>
+    <div class="cards">
+      <article class="card reveal"><img src="img/escopeta.png" alt="Escopeta recortada"><h3>Escopeta recortada</h3><p>Arma principal del granjero. Gran daño de cerca y media distancia, pero dispara lento y exige recarga tras cada tiro.</p></article>
+      <article class="card reveal"><img src="img/pistola.png" alt="Pistola"><h3>Pistola</h3><p>Segunda arma. Largo alcance, pero solo aturde unos segundos al sobreviviente.</p></article>
+      <article class="card reveal"><img src="img/medkit.png" alt="Botiquín"><h3>Botiquín</h3><p>Cura uno de los impactos recibidos. Lo necesitarás para resistir.</p></article>
+      <article class="card reveal"><img src="img/botas.png" alt="Botas ligeras"><h3>Botas ligeras</h3><p>Aumentan la velocidad del asesino por un rato para alcanzar a su presa.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="controles" class="section">
+  <div class="wrap">
+    <h2 class="reveal">Controles</h2>
+    <div class="controls">
+      <div class="reveal">
+        <h3 class="tag-s">Sobreviviente</h3>
+        <table>
+          <tr><th>Acción</th><th>Tecla</th></tr>
+          <tr><td>Moverse</td><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td></tr>
+          <tr><td>Correr (sprint)</td><td><kbd>Shift</kbd> mantener</td></tr>
+          <tr><td>Agacharse / sigilo</td><td><kbd>Ctrl</kbd> mantener o alternar</td></tr>
+          <tr><td>Saltar</td><td><kbd>Espacio</kbd></td></tr>
+          <tr><td>Interactuar (power-up, puertas)</td><td><kbd>E</kbd></td></tr>
+          <tr><td>Usar power-up</td><td><kbd>Q</kbd> o clic derecho</td></tr>
+          <tr><td>Mirar alrededor</td><td>Mouse</td></tr>
+        </table>
+      </div>
+      <div class="reveal">
+        <h3 class="tag-k">Asesino</h3>
+        <table>
+          <tr><th>Acción</th><th>Tecla</th></tr>
+          <tr><td>Moverse (más lento que el sobreviviente)</td><td><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td></tr>
+          <tr><td>Apuntar / alzar arma</td><td>Clic derecho (mantener)</td></tr>
+          <tr><td>Disparar</td><td>Clic izquierdo</td></tr>
+          <tr><td>Recargar</td><td><kbd>R</kbd></td></tr>
+          <tr><td>Cambiar de arma</td><td><kbd>Q</kbd> o rueda del mouse</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap two-col">
+    <div class="reveal">
+      <h2>Sonido y audio</h2>
+      <ol class="audio">
+        <li><b>01</b> Ambientación de pájaros por todo el mapa</li>
+        <li><b>02</b> Ruidos de zombies, ligados a ellos</li>
+        <li><b>03</b> Sonidos de agua para el lago</li>
+        <li><b>04</b> Sonidos de disparos, ligados al arma</li>
+      </ol>
+    </div>
+    <div class="reveal">
+      <h2>Atmósfera</h2>
+      <p class="lead small">Partículas que sostienen el miedo: niebla, lluvia, luciérnagas, moscas, humo de escopeta, polvo de heno, hojas de maíz, chispas del generador, gotas de gasolina y sangre al recibir un impacto.</p>
+      <img src="img/particulas.jpg" alt="Iconos de partículas" class="particles">
+    </div>
+  </div>
+</section>
+
+<section id="galeria" class="section">
+  <div class="wrap">
+    <h2 class="reveal">Galería</h2>
+    <p class="lead reveal">Capturas del proyecto en Unreal Engine 5 y pantallas de menú.</p>
+    <div class="grid">
+      <figure class="reveal big"><img src="img/noche-granja.jpg" alt="Granja de noche con cielo rojo"><figcaption>La granja bajo el cielo rojo</figcaption></figure>
+      <figure class="reveal"><img src="img/generador.jpg" alt="Generador bajo la lluvia"><figcaption>El generador</figcaption></figure>
+      <figure class="reveal"><img src="img/cartel.jpg" alt="Cartel de advertencia"><figcaption>Zona de peligro</figcaption></figure>
+      <figure class="reveal"><img src="img/menu-inicio.jpg" alt="Menú de inicio"><figcaption>Menú de inicio</figcaption></figure>
+      <figure class="reveal"><img src="img/menu-ganaste.jpg" alt="Pantalla de victoria"><figcaption>Victoria</figcaption></figure>
+      <figure class="reveal"><img src="img/menu-derrota.jpg" alt="Pantalla de derrota"><figcaption>Derrota</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="equipo" class="section dark team">
+  <div class="wrap">
+    <h2 class="reveal">El equipo</h2>
+    <ul class="people reveal">
+      <li>Delgado González Hannia Lizeth <small>1947757</small></li>
+      <li>Ramos Vázquez Luis Ángel <small>1958305</small></li>
+      <li>Galindo Cantú Jonathan Santiago <small>2047864</small></li>
+      <li>Méndez Olivares Patricia <small>2048475</small></li>
+      <li>Gaytán Lara Oliver Alexander <small>2046307</small></li>
+    </ul>
+    <p class="teacher reveal">Maestra: Ángeles Daniela Ramírez Álvarez</p>
+  </div>
+</section>
+
+<footer>
+  <img src="img/skull.png" alt="" width="28">
+  <p>Harvest Hollow · Propuesta de videojuego · 16/08/2026</p>
+  <p class="small">No mires atrás.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
