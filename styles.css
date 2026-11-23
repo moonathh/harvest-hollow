@@ -149,3 +149,17 @@ footer .small{color:var(--blood-hi);font-style:italic}
   .section{padding:4.5rem 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#atmosphere{display:none}}
+
+/* REDES */
+.socials{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:1rem}
+.social{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:2.2rem 1rem;border:1px solid var(--line);background:rgba(236,228,220,.03);transition:.3s;text-align:center}
+.social svg{width:48px;height:48px;color:var(--blood-hi);transition:.3s}
+.social h3{font-size:1.3rem;margin-top:.4rem}
+.social span{color:var(--muted);font-size:1rem}
+.social:hover{border-color:var(--blood);transform:translateY(-6px);box-shadow:0 12px 40px rgba(153,23,29,.25)}
+.social:hover svg{color:var(--ink);filter:drop-shadow(0 0 10px var(--blood-hi))}
+.foot-social{display:flex;gap:1.2rem;margin:.4rem 0}
+.foot-social a{color:var(--muted);transition:.2s}
+.foot-social a:hover{color:var(--blood-hi)}
+.foot-social svg{width:26px;height:26px}
+@media(max-width:850px){.socials{grid-template-columns:1fr}}
